@@ -2,18 +2,38 @@
 
 #include <vector>
 #include <string>
+#include "Session.h"
+#include <iostream>
+
 class Course
 {
 public:
 	Course();
 	virtual ~Course();
 	std::vector<Course*> preRecs;
+	std::vector<Course*> courseList;
+
+	void addCourse(std::string num, int credit, std::string name)
+	{
+		Course* ptr = new Course;
+		ptr->courseNum = num;
+		ptr->creditVal = credit;
+		ptr->courseName = name;
+
+		courseList.push_back(ptr);
+	}
+	
+	Course * searchCoursebyName(std::string name);
+	Course * searchCoursebyNum(std::string num);
+
+	
 
 private:
-	int courseNum;
-	//std::vector<Session *> sessions;
+
+	std::string courseNum;
 	int creditVal;
-	
+	std::string courseName;
+	std::vector<Session*> sessions;
 	
 
 };

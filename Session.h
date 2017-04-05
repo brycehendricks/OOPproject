@@ -1,7 +1,6 @@
 #pragma once
-#include "Course.h"
-class Session :
-	public Course
+#include <string>
+class Session 
 {
 public:
 	Session();
@@ -9,7 +8,7 @@ public:
 
 private:
 	int classNum;
-	//std::vector<bool> seats;
+	int numSeats;
 	int time;
 	std::string instructor;
 };
