@@ -2,7 +2,6 @@
 
 #include <vector>
 #include <string>
-#include "Session.h"
 #include <iostream>
 
 class Course
@@ -19,12 +18,16 @@ public:
 		ptr->courseNum = num;
 		ptr->creditVal = credit;
 		ptr->courseName = name;
+	
+
 
 		courseList.push_back(ptr);
 	}
 	
 	Course * searchCoursebyName(std::string name);
 	Course * searchCoursebyNum(std::string num);
+	
+	void displayCourses();
 
 	
 
@@ -33,7 +36,7 @@ private:
 	std::string courseNum;
 	int creditVal;
 	std::string courseName;
-	std::vector<Session*> sessions;
+	
 	
 
 };

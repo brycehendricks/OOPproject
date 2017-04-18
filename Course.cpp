@@ -37,3 +37,12 @@ Course * Course::searchCoursebyNum(std::string num)
 	}
 	return NULL;
 }
+
+
+void Course::displayCourses()
+{
+	for (int i = 0; i < courseList.size(); i++)
+	{
+		std::cout << courseList[i]->courseNum << " : " << courseList[i]->courseName << std::endl;
+	}
+}
