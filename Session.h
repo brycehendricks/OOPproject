@@ -9,7 +9,8 @@ public:
 	std::vector<Session*> sessionList;
 	
 	void displaySessions();
-	void addSession(int classNum, int numSeats, std::string time, std::string instructor);
+	Session * searchSessionbyName(std::string name, int classNum);
+	void addSession(int classNum, int numSeats, std::string time, std::string instructor, std::string name);
 private:
 	int classNum;
 	int numSeats;

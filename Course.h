@@ -31,7 +31,7 @@ public:
 
 	
 
-private:
+protected:
 
 	std::string courseNum;
 	int creditVal;

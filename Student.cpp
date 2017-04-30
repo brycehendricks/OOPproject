@@ -3,8 +3,9 @@
 
 
 
-Student::Student()
+Student::Student(int id)
 {
+	ID = id;
 }
 
 
@@ -28,19 +29,19 @@ bool Student::timeConflicts(std::vector<Course *> courseEnrolled, Course* curren
 	return true;
 }
 
-void Student::enroll(Course* wantedCourse)
+void Student::enroll(Session* wantedCourse)
 {
-	enrolledCourses.push_back(wantedCourse);
+	coursesEnrolled.push_back(wantedCourse);
 }
 
-void Student::drop(Course * droppedCourse)
+void Student::drop(Session * droppedCourse)
 {
 	Course* temp;
-	for (int i = 0; i < enrolledCourses.size(); i++)
+	for (int i = 0; i < coursesEnrolled.size(); i++)
 	{
-		if (droppedCourse == enrolledCourses[i])
+		if (droppedCourse == coursesEnrolled[i])
 		{
-			enrolledCourses.erase(enrolledCourses.begin()+i);
+			coursesEnrolled.erase(coursesEnrolled.begin()+i);
 
 		}
 	}

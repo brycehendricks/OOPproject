@@ -5,17 +5,16 @@
 class Student
 {
 public:
-	Student();
+	Student(int id);
 	~Student();
-	void enroll(Course * wantedCourse);
-	void drop(Course* droppedCourse);
+	void enroll(Session* wantedCourse);
+	void drop(Session* droppedCourse);
 
 private:
 	int ID;
 	Course * currentCourse;
 	std::vector<Course *> coursesTaken;
-	std::vector<Course *> coursesEnrolled;
-	std::vector<Course*> enrolledCourses;
+	std::vector<Session *> coursesEnrolled;
 	bool eligible(std::vector<Course *> coursesTaken, Course* currentCourse);
 	bool timeConflicts(std::vector<Course *> courseEnrolled, Course* currentCourse);
 
