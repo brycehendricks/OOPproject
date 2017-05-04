@@ -40,9 +40,11 @@ Session * Session::searchSessionbyName(std::string name, int classNum)
 	{
 		if (sessionList[i]->courseName == name && sessionList[i]->classNum == classNum)
 		{
+			std::cout << "Avalible" << std::endl;
 			return sessionList[i];
 		}
 
 	}
+	std::cout << "Not found" << std::endl;
 	return NULL;
 }

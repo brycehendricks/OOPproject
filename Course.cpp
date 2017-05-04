@@ -18,10 +18,12 @@ Course * Course::searchCoursebyName(std::string name)
 	{
 		if (courseList[i]->courseName == name)
 		{
+			std::cout << "Avalible" << std::endl;
 			return courseList[i];
 		}
 		
 	}
+	std::cout << "Not found" << std::endl;
 	return NULL;
 }
 
@@ -31,10 +33,12 @@ Course * Course::searchCoursebyNum(std::string num)
 	{
 		if (courseList[i]->courseNum == num)
 		{
+			std::cout << "Avalible" << std::endl;
 			return courseList[i];
 		}
 
 	}
+	std::cout << "Not found" << std::endl;
 	return NULL;
 }
 
